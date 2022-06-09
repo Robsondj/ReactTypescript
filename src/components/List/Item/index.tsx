@@ -16,7 +16,7 @@ const Item = (
     }: Props) => {
     return (
         <li 
-          className={`${style.item} ${selected ? style.selectedItem : ''} ${completed ? style.selectedItem : ''}`}
+          className={`${style.item} ${selected ? style.selectedItem : ''} ${completed ? style.completedItem : ''}`}
           onClick={() => !completed && choseTask(
             {
                 task,

@@ -16,6 +16,7 @@ const Timer = ({ selected, finishTask }: Props) => {
 
     useEffect(() => {
         if(selected?.time) {
+            console.log(selected.time);
             setTime(castTimeToSeconds(selected.time));
         }
     }, [selected]);
@@ -33,7 +34,7 @@ const Timer = ({ selected, finishTask }: Props) => {
     return (
         <div className={style.timer} >
             <p className={style.title} >Escolha um card e inicie o Cronômetro</p>
-            <div className={style.timerWrapper} >
+            <div className={style.clockWrapper} >
                 <Clock time={time} />
             </div>
             <Button onClick={() => decreaseTime(time)} >
